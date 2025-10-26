@@ -52,6 +52,7 @@ button {
   font-size: 1em;
   cursor: pointer;
   animation: pulse 2s infinite;
+  margin: 10px;
 }
 
 @keyframes pulse {
@@ -106,19 +107,6 @@ img.revealable.show {
 @keyframes floatReverse {
   0% { transform: translateY(100vh); }
   100% { transform: translateY(0); }
-}
-
-/* Floating stickers */
-.floating-stickers img.float {
-  position: fixed;
-  animation: drift 12s infinite linear;
-  opacity: 0.6;
-  width: 80px;
-}
-
-@keyframes drift {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(100vh) rotate(360deg); }
 }
 
 /* Popups */
