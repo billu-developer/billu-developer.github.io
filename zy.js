@@ -14,12 +14,12 @@ function reveal(id) {
   if (img) {
     img.classList.add('show');
   }
-}
 
-function reveal(id) {
-  const img = document.getElementById(id);
-  if (img) {
-    img.classList.add('show');
+  // Check if all revealable images are shown
+  const allImages = document.querySelectorAll('.revealable');
+  const allShown = Array.from(allImages).every(img => img.classList.contains('show'));
+  if (allShown) {
+    document.getElementById('finalPopup').style.display = 'flex';
   }
 }
 
@@ -33,41 +33,27 @@ window.addEventListener('scroll', () => {
   });
 });
 
-function reveal(id) {
-  const img = document.getElementById(id);
-  if (img) {
-    img.classList.add('show');
-  }
-
-  // Check if all revealable images are shown
-  const allImages = document.querySelectorAll('.revealable');
-  const allShown = Array.from(allImages).every(img => img.classList.contains('show'));
-  if (allShown) {
-    document.getElementById('finalPopup').style.display = 'block';
-  }
-}
-
 function yayPopup() {
   document.getElementById('finalPopup').style.display = 'none';
-  document.getElementById('yayPopupBox').style.display = 'block';
+  document.getElementById('yayPopupBox').style.display = 'flex';
 }
 
 function sadPopup() {
   document.getElementById('finalPopup').style.display = 'none';
-  document.getElementById('sadPopupBox').style.display = 'block';
+  document.getElementById('sadPopupBox').style.display = 'flex';
 }
 
 function scrollPrompt() {
-  document.getElementById('scrollPopup').style.display = 'block';
+  document.getElementById('scrollPopup').style.display = 'flex';
 }
+
 // Close popup when clicking outside the content box
 window.addEventListener('click', function(event) {
   const popups = document.querySelectorAll('.popup');
   popups.forEach(popup => {
     const content = popup.querySelector('.popup-content');
-    if (popup.style.display === 'block' && !content.contains(event.target)) {
+    if (popup.style.display === 'flex' && !content.contains(event.target)) {
       popup.style.display = 'none';
     }
   });
 });
-
