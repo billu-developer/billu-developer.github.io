@@ -8,15 +8,15 @@
 </head>
 <body>
   <div class="ribbon-bg"></div>
+
   <!-- Top Greeting -->
-<section class="top-check">
-  <h1>Kasiiii hoo merii pyariii behenaaa 🩷</h1>
-  <button onclick="scrollPrompt()">Thikk huu bhaiyaaa</button>
-  <button onclick="scrollPrompt()">Pyaariii achiii kushhh huuu bahiayaaa</button>
-</section>
+  <section class="top-check">
+    <h1>Kasiiii hoo merii pyariii behenaaa 🩷</h1>
+    <button onclick="scrollPrompt()">Thikk huu bhaiyaaa</button>
+    <button onclick="scrollPrompt()">Pyaariii achiii kushhh huuu bahiayaaa</button>
+  </section>
 
-
-  <!-- Hero Section -->
+  <!-- Sections with revealable images -->
   <section class="hero">
     <h1>meriiiiiiiiii pyaarrrrrrrrr behenaaaaaa 🎉</h1>
     <p>Heheheheh, abb hameshaa happy rhnaa... maii hunaa tumharreeee sathhh abbb see 💖<br>
@@ -25,14 +25,12 @@
     <img id="img1" class="revealable" src="WhatsApp Image 2025-10-25 at 10.38.04 AM.jpeg" alt="Greeting Card" />
   </section>
 
-  <!-- Reveal Task -->
   <section class="task">
     <h2>🎁 Click the button to reveal a surprise!</h2>
     <button onclick="reveal('img2')">Click Me!</button>
     <img id="img2" class="revealable" src="4635e9899597a70e0d45bed5f5a3a4ca-removebg-preview.png" alt="Surprise Kuromi" />
   </section>
 
-  <!-- Study Section -->
   <section class="study">
     <h2>📚 Study Time!</h2>
     <button onclick="reveal('img3')">Click to reveal 📖</button>
@@ -40,14 +38,12 @@
     <p>Tummm toh topper hai meri behena! Achee see padhoooooooo maiii bhiii padhtaa rhungaaaaa 💪</p>
   </section>
 
-  <!-- Music Section -->
   <section class="music">
     <h2>🎶 gaanaa jaauuu??</h2>
     <button onclick="reveal('img4')">Click to reveal 🎵</button>
     <img id="img4" class="revealable" src="WhatsApp Image 2025-10-25 at 10.38.07 AM.jpeg" alt="Musical Cat" />
   </section>
 
-  <!-- Secret Sharing -->
   <section class="besties">
     <h2>usssssssss......!?</h2>
     <button onclick="reveal('img5')">Click to reveal 🤫</button>
@@ -55,7 +51,6 @@
     <p>“tumahreee sathhhh yaappinnggg mee jitnaa majaaa aata hainaaaaaaaaaa... unexplainableee” 🤫💕</p>
   </section>
 
-  <!-- Quiz Section -->
   <section class="quiz">
     <h2>❓ Bhaiyaa ka Puzzle</h2>
     <button onclick="reveal('img6')">Click to reveal 🤔</button>
@@ -64,7 +59,6 @@
     <button onclick="alert('Samosa or Chai? 🤭')">Chai or Samosa?</button>
   </section>
 
-  <!-- Fighter Cat Mission -->
   <section class="mission">
     <h2>😼 mission mkk ka khell khatamm karnaaa</h2>
     <button onclick="reveal('img7')">Click to reveal 💣</button>
@@ -72,7 +66,6 @@
     <p class="mission-text">Mai ja rhaaa MKK ki band bajaneee!! usneee chuuu kaiseee diyaa merii pyarii behenaaa koooooooo!! 💣💥</p>
   </section>
 
-  <!-- Victory Section -->
   <section class="victory">
     <h2>🎉 hapiieeeeeeee!!! &lt;33</h2>
     <button onclick="reveal('img8')">Click to reveal ✌️</button>
@@ -80,7 +73,6 @@
     <p>hehehehehehehehehehhe happyyy rhnaaaaaaaa bahuttt jaddaaaaayaaadaaa ✌️💙</p>
   </section>
 
-  <!-- Hug Section -->
   <section class="hug">
     <h2>hehehehehhehehe</h2>
     <button onclick="reveal('img9')">Click to reveal 💤</button>
@@ -94,39 +86,37 @@
     <img src="WhatsApp Image 2025-10-25 at 10.38.04 AM.jpeg" class="float" />
     <img src="WhatsApp Image 2025-10-25 at 10.38.06 AM.jpeg" class="float" />
   </div>
+
   <!-- Final Reveal Popup -->
-<div id="finalPopup" class="popup">
-  <div class="popup-content">
-    <p>Abb happpy ho gyiii merii pyariii behenaaaaa 🥹💖</p>
-    <button onclick="yayPopup()">Haaa bhaiyyaaa</button>
-    <button onclick="sadPopup()">Bhaiyaaa todaa sa achaa nahiii lag rhaa haiii yaar</button>
+  <div id="finalPopup" class="popup">
+    <div class="popup-content">
+      <p>Abb happpy ho gyiii merii pyariii behenaaaaa 🥹💖</p>
+      <button onclick="yayPopup()">Haaa bhaiyyaaa</button>
+      <button onclick="sadPopup()">Bhaiyaaa todaa sa achaa nahiii lag rhaa haiii yaar</button>
+    </div>
   </div>
-</div>
 
-<!-- Yay Popup -->
-<div id="yayPopupBox" class="popup">
-  <div class="popup-content yay">
-    <p>Yayyyyyyyy 🎉🎉🎉</p>
+  <!-- Yay Popup -->
+  <div id="yayPopupBox" class="popup yay">
+    <div class="popup-content">
+      <p>Yayyyyyyyy 🎉🎉🎉</p>
+    </div>
   </div>
-</div>
 
-<!-- Sad Popup -->
-<div id="sadPopupBox" class="popup">
-  <div class="popup-content sad">
-    <p>Kyaa ho gaya merii pyarrii behenaaa maii hunaaaaaaaaa 😢</p>
+  <!-- Sad Popup -->
+  <div id="sadPopupBox" class="popup sad">
+    <div class="popup-content">
+      <p>Kyaa ho gaya merii pyarrii behenaaa maii hunaaaaaaaaa 😢</p>
+    </div>
   </div>
-</div>
 
-<!-- Scroll Prompt Popup -->
-<div id="scrollPopup" class="popup">
-  <div class="popup-content">
-    <p>Achaa merii behnaaa scroll the pagee now 💌</p>
+  <!-- Scroll Prompt Popup -->
+  <div id="scrollPopup" class="popup">
+    <div class="popup-content">
+      <p>Achaa merii behnaaa scroll the pagee now 💌</p>
+    </div>
   </div>
-</div>
-
 
   <script src="zy.js"></script>
 </body>
 </html>
-
-
