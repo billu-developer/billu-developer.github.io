@@ -94,3 +94,54 @@ img.revealable.show {
   display: block;
   opacity: 1;
 }
+
+/* Sparkles near headers */
+h2::after {
+  content: " ✨✨";
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Fade-in sections */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* More ribbons */
+.ribbon-bg::before,
+.ribbon-bg::after {
+  content: "🎀 🎀 🎀 🎀 🎀";
+  position: fixed;
+  font-size: 2em;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.ribbon-bg::before {
+  top: 0;
+  left: 0;
+  animation: float 12s linear infinite;
+}
+
+.ribbon-bg::after {
+  bottom: 0;
+  right: 0;
+  animation: floatReverse 15s linear infinite;
+}
+
+@keyframes floatReverse {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(0); }
+}
+
