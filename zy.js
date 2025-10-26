@@ -1,14 +1,4 @@
-function revealImage() {
-  document.getElementById("surprise").classList.add("show");
-}
-
-function revealAllImages() {
-  const images = document.querySelectorAll('.revealable');
-  images.forEach(img => {
-    img.classList.add('show');
-  });
-}
-
+// Reveal a single image by ID
 function reveal(id) {
   const img = document.getElementById(id);
   if (img) {
@@ -23,6 +13,34 @@ function reveal(id) {
   }
 }
 
+// Reveal the surprise image (used in one section)
+function revealImage() {
+  document.getElementById("surprise").classList.add("show");
+}
+
+// Reveal all images at once (if needed)
+function revealAllImages() {
+  const images = document.querySelectorAll('.revealable');
+  images.forEach(img => img.classList.add('show'));
+}
+
+// Show the "yay" popup
+function yayPopup() {
+  document.getElementById('finalPopup').style.display = 'none';
+  document.getElementById('yayPopupBox').style.display = 'flex';
+}
+
+// Show the "sad" popup
+function sadPopup() {
+  document.getElementById('finalPopup').style.display = 'none';
+  document.getElementById('sadPopupBox').style.display = 'flex';
+}
+
+// Show the scroll prompt popup
+function scrollPrompt() {
+  document.getElementById('scrollPopup').style.display = 'flex';
+}
+
 // Fade-in sections on scroll
 window.addEventListener('scroll', () => {
   document.querySelectorAll('section').forEach(section => {
@@ -32,20 +50,6 @@ window.addEventListener('scroll', () => {
     }
   });
 });
-
-function yayPopup() {
-  document.getElementById('finalPopup').style.display = 'none';
-  document.getElementById('yayPopupBox').style.display = 'flex';
-}
-
-function sadPopup() {
-  document.getElementById('finalPopup').style.display = 'none';
-  document.getElementById('sadPopupBox').style.display = 'flex';
-}
-
-function scrollPrompt() {
-  document.getElementById('scrollPopup').style.display = 'flex';
-}
 
 // Close popup when clicking outside the content box
 window.addEventListener('click', function(event) {
