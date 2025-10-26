@@ -60,3 +60,14 @@ function sadPopup() {
 function scrollPrompt() {
   document.getElementById('scrollPopup').style.display = 'block';
 }
+// Close popup when clicking outside the content box
+window.addEventListener('click', function(event) {
+  const popups = document.querySelectorAll('.popup');
+  popups.forEach(popup => {
+    const content = popup.querySelector('.popup-content');
+    if (popup.style.display === 'block' && !content.contains(event.target)) {
+      popup.style.display = 'none';
+    }
+  });
+});
+
